@@ -1,18 +1,114 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap npm Setup</title>
-
+    <title>Hubungi Kami – Bimbel Prestasi</title>
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
+    link
   </head>
   <body>
+    <nav>
+      <div class="nav-container flex flex-row">
+        <a href="index.html" class="logo">
+          <img src="./asset/logo.png" />Bimbel <span>Prestasi</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Beranda</a>
+          <a href="keunggulan.html">Keunggulan</a>
+          <a href="program.html">Program</a>
+          <a href="jadwal.html">Jadwal</a>
+          <a href="tentang.html">Tentang</a>
+          <a href="testimoni.html">Testimoni</a>
+          <a href="hubungi.html" style="color: #2563eb">Hubungi</a>
+          <a href="kontak.html" style="color: white" class="btn-daftar"
+            >Daftar</a
+          >
+        </div>
+      </div>
+    </nav>
 
-    
+    <div class="container">
+      <div class="section-title">
+        <h2>Hubungi Kami</h2>
+        <p>Ada pertanyaan? Tim kami siap membantu kamu setiap hari.</p>
+      </div>
+
+      <div class="row info-row">
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-icon"></div>
+            <h4>Telepon / WhatsApp</h4>
+            <p>+62 823-3550-1686</p>
+            <a href="https://wa.me/6282335501686" class="btn-kontak"
+              >Chat WhatsApp</a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-icon"></div>
+            <h4>Email</h4>
+            <p>ferdinandahmad222@gmail.com</p>
+            <a href="mailto:ferdinandahmad222@gmail.com" class="btn-kontak"
+              >Kirim Email</a
+            >
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="info-card">
+            <div class="info-icon"></div>
+            <h4>Alamat</h4>
+            <p>Jl. Ria Desa Karangrejo, Kec. Garum, 66182 Jawa Timur</p>
+            <a
+              href="https://maps.app.goo.gl/3gJnkfWiLdrL8gQY8"
+              class="btn-kontak"
+              >Lihat Maps</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="jam-section">
+        <h3>Jam Operasional</h3>
+        <div class="row jam-grid">
+          <div class="col-md-4">
+            <div class="jam-card">
+              <div class="hari">Senin – Jumat</div>
+              <div class="waktu">08.00 – 20.00 WIB</div>
+              <span class="badge-buka">Buka</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="jam-card">
+              <div class="hari">Sabtu</div>
+              <div class="waktu">08.00 – 17.00 WIB</div>
+              <span class="badge-buka">Buka</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="jam-card">
+              <div class="hari">Minggu</div>
+              <div class="waktu">Libur</div>
+              <span class="badge-tutup">Tutup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Bimbel Prestasi. Semua hak dilindungi.</p>
+    </footer>
+
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
