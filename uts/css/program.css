@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 54px;
+  height: 54px;
+  margin-right: 10px;
+}
+
+.logo span {
+  color: #2563eb;
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.active {
+  color: #2563eb;
+}
+.btn-daftar {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 150px 0 80px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.price-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.price-card.featured {
+  background: #0f172a;
+  color: white;
+  transform: scale(1.05);
+  border-color: #334155;
+}
+.price-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #64748b;
+}
+.featured .price span {
+  color: #94a3b8;
+}
+
+.features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 35px;
+  flex-grow: 1;
+}
+.features li {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.featured .btn-select {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+.btn-select:hover {
+  background: #2563eb;
+  color: white;
+}
