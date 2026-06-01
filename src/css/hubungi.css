@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+}
+.logo img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+.logo span {
+  color: #2563eb;
+}
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.btn-daftar {
+  background: #2563eb;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 50px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 120px 0 80px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+.section-title p {
+  color: #64748b;
+}
+
+/* Info Cards */
+.info-row {
+  margin-bottom: 60px;
+}
+.info-card {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+.info-card:hover {
+  transform: translateY(-6px);
+}
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+}
+.info-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+.info-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.btn-kontak {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 9px 22px;
+  border-radius: 50px;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.btn-kontak:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Jam Operasional */
+.jam-section {
+  margin-bottom: 60px;
+}
+.jam-section h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+.jam-grid {
+}
+.jam-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.hari {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+.waktu {
+  color: #475569;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.badge-buka {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.badge-tutup {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Form Pertanyaan */
+.tanya-section {
+  background: white;
+  border-radius: 24px;
+  padding: 50px;
+  border: 1px solid #e2e8f0;
+}
+.tanya-section h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+.tanya-section > p {
+  color: #64748b;
+  margin-bottom: 35px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+.btn-kirim {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 13px 35px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-kirim:hover {
+  background: #1d4ed8;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 60px;
+}
