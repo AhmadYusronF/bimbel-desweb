@@ -16,8 +16,11 @@
           <a href="../../index.html">Beranda</a>
           <a href="keunggulan.html">Keunggulan</a>
           <a href="program.html">Program</a>
+          <a href="../jadwal.html">Jadwal</a>
+          <a href="../tentang.html">Tentang</a>
           <a href="testimoni.html">Testimoni</a>
-          <a href="kontak.html" class="btn-daftar" style="background: #1e293b"
+          <a href="../hubungi.html">Hubungi</a>
+          <a href="kontak.html" style="color: white" class="btn-daftar"
             >Daftar</a
           >
         </div>
@@ -28,36 +31,127 @@
       <div class="form-card">
         <h2>Pendaftaran Online</h2>
         <p>Lengkapi formulir di bawah ini untuk bergabung.</p>
-        <form
-          onsubmit="
-            event.preventDefault();
-            alert(
-              'Pendaftaran berhasil dikirim! Admin akan menghubungi melalui WhatsApp.',
-            );
-          "
-        >
+
+        <form name="formDaftar">
           <div class="form-group">
             <label>Nama Lengkap Siswa</label>
-            <input type="text" placeholder="Contoh: Budi Santoso" required />
+            <input
+              type="text"
+              name="nama"
+              placeholder="Nama Lengkap"
+              required
+            />
           </div>
           <div class="form-group">
             <label>No. WhatsApp (Aktif)</label>
-            <input type="tel" placeholder="0812xxxx" required />
+            <input type="tel" name="wa" placeholder="" required />
           </div>
+
+          <!-- Implementasi Objek Radio -->
+          <div class="form-group">
+            <label>Tingkat Pendidikan</label>
+            <div style="margin-top: 5px">
+              <input type="radio" name="tingkat" value="SMP" /> SMP<br />
+              <input type="radio" name="tingkat" value="SMA" /> SMA
+            </div>
+          </div>
+
+          <!-- Implementasi Objek Checkbox -->
+          <div class="form-group">
+            <label>Fasilitas Tambahan</label>
+            <div style="margin-top: 5px">
+              <input type="checkbox" name="fasilitas1" value="ON" /> Modul Cetak
+              Khusus
+              <br />
+              <input type="checkbox" name="fasilitas2" value="ON" /> Akses
+              Tryout CBT
+            </div>
+          </div>
+
           <div class="form-group">
             <label>Pilih Program</label>
-            <select>
-              <option>Reguler Class</option>
-              <option>Intensif UTBK</option>
-              <option>Privat Eksklusif</option>
+            <select name="program">
+              <option value="Reguler Class">Reguler Class</option>
+              <option value="Intensif UTBK">Intensif UTBK</option>
+              <option value="Privat Eksklusif">Privat Eksklusif</option>
             </select>
           </div>
           <div class="form-group">
             <label>Pesan/Pertanyaan</label>
-            <textarea rows="3" placeholder="Tanyakan apa saja..."></textarea>
+            <textarea
+              name="pesan"
+              rows="3"
+              placeholder="Tanyakan apa saja..."
+            ></textarea>
           </div>
-          <button type="submit" class="btn-submit">Kirim Sekarang</button>
+
+          <button type="button" class="btn-submit" onclick="prosesDaftar()">
+            Kirim Sekarang
+          </button>
+
+          <!-- Implementasi Objek Textarea untuk Output -->
+          <div class="form-group" style="margin-top: 40px">
+            <label>Output Hasil Pendaftaran:</label>
+            <textarea
+              name="outputHasil"
+              rows="6"
+              readonly
+              style="
+                background-color: #f8fafc;
+                color: #2563eb;
+                font-weight: 600;
+              "
+            ></textarea>
+          </div>
         </form>
+
+        <script language="JavaScript">
+          function prosesDaftar() {
+            var namaStr = document.formDaftar.nama.value;
+            var waStr = document.formDaftar.wa.value;
+            var programStr = document.formDaftar.program.value;
+            var pesanStr = document.formDaftar.pesan.value;
+
+            var tingkatStr = '';
+            if (document.formDaftar.tingkat[0].checked == true) {
+              tingkatStr = 'SMP';
+            } else {
+              tingkatStr = 'SMA';
+            }
+
+            var fasilitastr = '';
+            if (document.formDaftar.fasilitas1.checked == true) {
+              fasilitastr += '- Modul Cetak Khusus\n';
+            }
+            if (document.formDaftar.fasilitas2.checked == true) {
+              fasilitastr += '- Akses Tryout CBT\n';
+            }
+            if (fasilitastr == '') {
+              fasilitastr = '- Tidak ada fasilitas tambahan\n';
+            }
+
+            var hasilAkhir =
+              'Nama Siswa: ' +
+              namaStr +
+              '\n' +
+              'Nomor WA: ' +
+              waStr +
+              '\n' +
+              'Tingkat: ' +
+              tingkatStr +
+              '\n' +
+              'Program: ' +
+              programStr +
+              '\n' +
+              'Tambahan:\n' +
+              fasilitastr +
+              'Pesan: ' +
+              pesanStr;
+
+            document.formDaftar.outputHasil.value = hasilAkhir;
+            alert('Data atas nama ' + namaStr + ' berhasil diidentifikasi!');
+          }
+        </script>
       </div>
     </div>
   </body>

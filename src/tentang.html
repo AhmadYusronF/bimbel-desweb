@@ -1,116 +1,283 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap npm Setup</title>
+    <title>Tentang Kami - Bimbel Prestasi</title>
 
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8fafc;
+      }
+      
+      .hover-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .hover-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12) !important;
+      }
+
+      .bg-member-photo {
+        background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      }
+
+      .tracking-wide {
+        letter-spacing: 0.5px;
+      }
+    </style>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="./asset/logo.png" />Bimbel <span>Prestasi</span>
+  <body class="text-dark">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
+      <div class="container">
+        <a
+          href="../index.html"
+          class="navbar-brand fw-bolder d-flex align-items-center fs-4 text-dark"
+        >
+          <img
+            src="./asset/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            class="me-2"
+          />
+          Bimbel <span class="text-primary ms-1">Prestasi</span>
         </a>
-        <div class="nav-links">
-          <a href="index.html">Beranda</a>
-          <a href="keunggulan.html">Keunggulan</a>
-          <a href="program.html">Program</a>
-          <a href="jadwal.html">Jadwal</a>
-          <a href="tentang.html" style="color: #2563eb">Tentang</a>
-          <a href="testimoni.html">Testimoni</a>
-          <a href="hubungi.html">Hubungi</a>
-          <a href="kontak.html" style="color: white" class="btn-daftar"
-            >Daftar</a
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <div
+            class="navbar-nav align-items-center gap-3 fw-semibold"
+            style="font-size: 0.9rem"
           >
+            <a class="nav-link text-secondary" href="../index.html">Beranda</a>
+            <a class="nav-link text-secondary" href="/src/uts/keunggulan.html"
+              >Keunggulan</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/program.html"
+              >Program</a
+            >
+            <a class="nav-link text-secondary" href="jadwal.html">Jadwal</a>
+            <a class="nav-link text-primary" href="tentang.html">Tentang</a>
+            <a class="nav-link text-secondary" href="/src/uts/testimoni.html"
+              >Testimoni</a
+            >
+            <a class="nav-link text-secondary" href="hubungi.html">Hubungi</a>
+            <a
+              href="/src/uts/kontak.html"
+              class="btn btn-primary text-white rounded-pill px-4 py-2 ms-lg-2"
+              >Daftar</a
+            >
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="section-title">
-        <h2>Tim Pengembang Web</h2>
-        <p>
+    <div class="container" style="padding-top: 120px; padding-bottom: 80px">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-2 text-dark">Tim Pengembang Web</h2>
+        <p class="text-secondary mx-auto" style="max-width: 550px">
           Halaman ini dibuat oleh kelompok mahasiswa sebagai bagian dari Tugas 3
           mata kuliah Desain Web.
         </p>
       </div>
 
-      <div class="anggota-grid">
-        <div class="anggota-card">
-          <div class="anggota-foto">
-            <img src="./asset/Sahilla.jpeg" alt="Foto Anggota 1" />
-          </div>
-          <div class="anggota-info">
-            <h4>Sahila Fauza</h4>
-            <p class="nim">NIM: 24104410056</p>
-            <p class="detail">Teknik Informatika</p>
-          </div>
-        </div>
-
-        <div class="anggota-card">
-          <div class="anggota-foto">
-            <img src="./asset/Shella.jpeg" alt="Foto Anggota 2" />
-          </div>
-          <div class="anggota-info">
-            <h4>Shella Alrantisi</h4>
-            <p class="nim">NIM: 24104410060</p>
-            <p class="detail">Teknik Informatika</p>
-          </div>
-        </div>
-
-        <div class="anggota-card">
-          <div class="anggota-foto">
-            <img src="./asset/Ferdi.jpeg" alt="Foto Anggota 3" />
-          </div>
-          <div class="anggota-info">
-            <h4>Achmad Ferdinand</h4>
-            <p class="nim">NIM: 24104410058</p>
-            <p class="detail">Teknik Informatika</p>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div
+            class="card h-100 border-light border-opacity-50 shadow-sm rounded-4 hover-card overflow-hidden"
+          >
+            <div class="bg-member-photo py-4 d-flex justify-content-center">
+              <img
+                src="asset/fau.png"
+                alt="Sahila Fauza"
+                class="rounded-circle border border-4 border-white shadow-sm"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+            </div>
+            <div class="card-body p-4">
+              <h4 class="fw-bold fs-5 mb-1 text-dark">Sahila Fauza</h4>
+              <p
+                class="text-primary fw-bold tracking-wide mb-3"
+                style="font-size: 0.85rem"
+              >
+                NIM: 24104410056
+              </p>
+              <p
+                class="text-secondary small mb-0 d-flex align-items-center gap-2"
+              >
+                Teknik Informatika
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="anggota-card">
-          <div class="anggota-foto">
-            <img src="./asset/Fadil.jpeg" alt="Foto Anggota 4" />
-          </div>
-          <div class="anggota-info">
-            <h4>Ahmad Yusron Fadil</h4>
-            <p class="nim">NIM: 24104410050</p>
-            <p class="detail">Teknik Informatika</p>
+        <div class="col">
+          <div
+            class="card h-100 border-light border-opacity-50 shadow-sm rounded-4 hover-card overflow-hidden"
+          >
+            <div class="bg-member-photo py-4 d-flex justify-content-center">
+              <img
+                src="asset/shel.png"
+                alt="Shella Alrantisi"
+                class="rounded-circle border border-4 border-white shadow-sm"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+            </div>
+            <div class="card-body p-4">
+              <h4 class="fw-bold fs-5 mb-1 text-dark">Shella Alrantisi</h4>
+              <p
+                class="text-primary fw-bold tracking-wide mb-3"
+                style="font-size: 0.85rem"
+              >
+                NIM: 24104410060
+              </p>
+              <p
+                class="text-secondary small mb-0 d-flex align-items-center gap-2"
+              >
+                Teknik Informatika
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="anggota-card">
-          <div class="anggota-foto">
-            <img src="./asset/Rechan.jpeg" alt="Foto Anggota 5" />
-          </div>
-          <div class="anggota-info">
-            <h4>Rechan Rizky Saputra</h4>
-            <p class="nim">NIM: 24104410083</p>
-            <p class="detail">Teknik Informatika</p>
+        <div class="col">
+          <div
+            class="card h-100 border-light border-opacity-50 shadow-sm rounded-4 hover-card overflow-hidden"
+          >
+            <div class="bg-member-photo py-4 d-flex justify-content-center">
+              <img
+                src="asset/prof.png"
+                alt="Achmad Ferdinand"
+                class="rounded-circle border border-4 border-white shadow-sm"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+            </div>
+            <div class="card-body p-4">
+              <h4 class="fw-bold fs-5 mb-1 text-dark">Achmad Ferdinand</h4>
+              <p
+                class="text-primary fw-bold tracking-wide mb-3"
+                style="font-size: 0.85rem"
+              >
+                NIM: 24104410058
+              </p>
+              <p
+                class="text-secondary small mb-0 d-flex align-items-center gap-2"
+              >
+                Teknik Informatika
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="anggota-card">
-          <div class="anggota-foto">
-            <img src="./asset/Dimas.jpeg" alt="Foto Anggota 6" />
+        <div class="col">
+          <div
+            class="card h-100 border-light border-opacity-50 shadow-sm rounded-4 hover-card overflow-hidden"
+          >
+            <div class="bg-member-photo py-4 d-flex justify-content-center">
+              <img
+                src="asset/fa.png"
+                alt="Ahmad Yusron Fadil"
+                class="rounded-circle border border-4 border-white shadow-sm"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+            </div>
+            <div class="card-body p-4">
+              <h4 class="fw-bold fs-5 mb-1 text-dark">Ahmad Yusron Fadil</h4>
+              <p
+                class="text-primary fw-bold tracking-wide mb-3"
+                style="font-size: 0.85rem"
+              >
+                NIM: 24104410050
+              </p>
+              <p
+                class="text-secondary small mb-0 d-flex align-items-center gap-2"
+              >
+                Teknik Informatika
+              </p>
+            </div>
           </div>
-          <div class="anggota-info">
-            <h4>Dimas Surya Wismoady</h4>
-            <p class="nim">NIM: 24104410061</p>
-            <p class="detail">Teknik Informatika</p>
+        </div>
+
+        <div class="col">
+          <div
+            class="card h-100 border-light border-opacity-50 shadow-sm rounded-4 hover-card overflow-hidden"
+          >
+            <div class="bg-member-photo py-4 d-flex justify-content-center">
+              <img
+                src="asset/rec.png"
+                alt="Rechan Rizky Saputra"
+                class="rounded-circle border border-4 border-white shadow-sm"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+            </div>
+            <div class="card-body p-4">
+              <h4 class="fw-bold fs-5 mb-1 text-dark">Rechan Rizky Saputra</h4>
+              <p
+                class="text-primary fw-bold tracking-wide mb-3"
+                style="font-size: 0.85rem"
+              >
+                NIM: 24104410083
+              </p>
+              <p
+                class="text-secondary small mb-0 d-flex align-items-center gap-2"
+              >
+                Teknik Informatika
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card h-100 border-light border-opacity-50 shadow-sm rounded-4 hover-card overflow-hidden"
+          >
+            <div class="bg-member-photo py-4 d-flex justify-content-center">
+              <img
+                src="asset/dem.png"
+                alt="Dimas Surya Wismoady"
+                class="rounded-circle border border-4 border-white shadow-sm"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+            </div>
+            <div class="card-body p-4">
+              <h4 class="fw-bold fs-5 mb-1 text-dark">Dimas Surya Wismoady</h4>
+              <p
+                class="text-primary fw-bold tracking-wide mb-3"
+                style="font-size: 0.85rem"
+              >
+                NIM: 24104410061
+              </p>
+              <p
+                class="text-secondary small mb-0 d-flex align-items-center gap-2"
+              >
+                Teknik Informatika
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 Bimbel Prestasi. Dibuat oleh Kelompok [Nomor Kelompok].</p>
+    <footer class="text-center py-4 mt-5 border-top text-secondary small">
+      <p class="mb-0">&copy; 2026 Bimbel Prestasi. Dibuat oleh Kelompok 2.</p>
     </footer>
 
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>

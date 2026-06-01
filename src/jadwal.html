@@ -1,233 +1,325 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap npm Setup</title>
+    <title>Jadwal Kelas - Bimbel Prestasi</title>
 
     <link
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8fafc;
+      }
+
+      .table-custom-header {
+        background-color: #2563eb !important;
+        color: white !important;
+      }
+
+      .table-rounded-wrap {
+        border-radius: 16px;
+        overflow: hidden;
+      }
+    </style>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="./asset/logo.png" />Bimbel <span>Prestasi</span>
+  <body class="text-dark">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
+      <div class="container">
+        <a
+          href="../index.html"
+          class="navbar-brand fw-bolder d-flex align-items-center fs-4 text-dark"
+        >
+          <img
+            src="./asset/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            class="me-2"
+          />
+          Bimbel <span class="text-primary ms-1">Prestasi</span>
         </a>
-        <div class="nav-links">
-          <a href="index.html">Beranda</a>
-          <a href="keunggulan.html">Keunggulan</a>
-          <a href="program.html">Program</a>
-          <a href="jadwal.html" style="color: #2563eb">Jadwal</a>
-          <a href="tentang.html">Tentang</a>
-          <a href="testimoni.html">Testimoni</a>
-          <a href="hubungi.html">Hubungi</a>
-          <a href="kontak.html" style="color: white" class="btn-daftar"
-            >Daftar</a
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <div
+            class="navbar-nav align-items-center gap-3 fw-semibold"
+            style="font-size: 0.9rem"
           >
+            <a class="nav-link text-secondary" href="../index.html">Beranda</a>
+            <a class="nav-link text-secondary" href="/src/uts/keunggulan.html"
+              >Keunggulan</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/program.html"
+              >Program</a
+            >
+            <a class="nav-link text-primary" href="jadwal.html">Jadwal</a>
+            <a class="nav-link text-secondary" href="tentang.html">Tentang</a>
+            <a class="nav-link text-secondary" href="/src/uts/testimoni.html"
+              >Testimoni</a
+            >
+            <a class="nav-link text-secondary" href="hubungi.html">Hubungi</a>
+            <a
+              href="/src/uts/kontak.html"
+              class="btn btn-primary text-white rounded-pill px-4 py-2 ms-lg-2"
+              >Daftar</a
+            >
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="section-title">
-        <h2>Jadwal Kelas</h2>
-        <p>
+    <div class="container" style="padding-top: 120px; padding-bottom: 80px">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-2">Jadwal Kelas</h2>
+        <p class="text-secondary">
           Pilih program dan lihat jadwal pertemuan yang tersedia setiap
           minggunya.
         </p>
       </div>
 
-      <div>
-        <div class="jadwal-header">
+      <div class="mb-5">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4"
+        >
           <div>
-            <h3>Program Reguler</h3>
-            <p>3x pertemuan seminggu · Maks. 15 siswa per kelas</p>
+            <h3 class="fw-bold fs-4 mb-1">Program Reguler</h3>
+            <p class="text-secondary small mb-0">
+              3x pertemuan seminggu · Maks. 15 siswa per kelas
+            </p>
           </div>
-          <div class="harga-badge">Rp 450.000 <span>/bulan</span></div>
+          <div
+            class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-4 py-2 fs-5 border border-primary-subtle"
+          >
+            Rp 200.000<span class="fw-normal text-secondary fs-6">/bulan</span>
+          </div>
         </div>
 
-        <div class="table-responsive">
-          <table class="table table-bordered jadwal-table">
+        <div
+          class="table-responsive shadow-sm border border-light table-rounded-wrap"
+        >
+          <table class="table table-hover align-middle mb-0 text-secondary">
             <thead>
               <tr>
-                <th>Hari</th>
-                <th>Waktu</th>
-                <th>Mata Pelajaran</th>
-                <th>Pengajar</th>
-                <th>Ruang</th>
+                <th class="table-custom-header py-3 border-0">Hari</th>
+                <th class="table-custom-header py-3 border-0">Waktu</th>
+                <th class="table-custom-header py-3 border-0">
+                  Mata Pelajaran
+                </th>
+                <th class="table-custom-header py-3 border-0">Pengajar</th>
+                <th class="table-custom-header py-3 border-0">Ruang</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Senin</td>
+                <td class="py-3">Senin</td>
                 <td>15.00 – 17.00</td>
-                <td>Matematika</td>
-                <td>Budi Hartono</td>
+                <td class="text-dark fw-medium">Matematika</td>
+                <td>Rechan Rizky Saputra</td>
                 <td>Ruang A</td>
               </tr>
               <tr>
-                <td>Rabu</td>
+                <td class="py-3">Rabu</td>
                 <td>15.00 – 17.00</td>
-                <td>Bahasa Inggris</td>
-                <td>Dewi Anjani</td>
+                <td class="text-dark fw-medium">Bahasa Inggris</td>
+                <td>Achmad Ferdinand</td>
                 <td>Ruang B</td>
               </tr>
               <tr>
-                <td>Jumat</td>
+                <td class="py-3">Jumat</td>
                 <td>15.00 – 17.00</td>
-                <td>Fisika</td>
-                <td>Budi Hartono</td>
+                <td class="text-dark fw-medium">Fisika</td>
+                <td>Sahila Fauza</td>
                 <td>Ruang A</td>
               </tr>
               <tr>
-                <td>Senin</td>
+                <td class="py-3">Senin</td>
                 <td>18.00 – 20.00</td>
-                <td>Biologi</td>
-                <td>Rizal Prasetya</td>
+                <td class="text-dark fw-medium">Biologi</td>
+                <td>Dimas Surya Wismoady</td>
                 <td>Ruang C</td>
               </tr>
               <tr>
-                <td>Kamis</td>
+                <td class="py-3">Kamis</td>
                 <td>15.00 – 17.00</td>
-                <td>Kimia</td>
-                <td>Rizal Prasetya</td>
+                <td class="text-dark fw-medium">Kimia</td>
+                <td>Ahmad Yusron Fadil</td>
                 <td>Ruang C</td>
               </tr>
             </tbody>
           </table>
-          <br />
         </div>
       </div>
 
-      <div>
-        <div class="jadwal-header">
+      <div class="mb-5">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4"
+        >
           <div>
-            <h3>Program Intensif UTBK</h3>
-            <p>
+            <h3 class="fw-bold fs-4 mb-1">Program Intensif UTBK</h3>
+            <p class="text-secondary small mb-0">
               5x pertemuan seminggu · Tryout CBT berkala · Konsultasi jurusan
             </p>
           </div>
-          <div class="harga-badge intensif">Rp 850.000 <span>/bulan</span></div>
+          <div class="badge bg-dark text-white rounded-pill px-4 py-2 fs-5">
+            Rp 500.000 <span class="fw-normal text-secondary fs-6">/bulan</span>
+          </div>
         </div>
 
-        <div class="table-responsive">
-          <table class="table table-bordered jadwal-table">
+        <div
+          class="table-responsive shadow-sm border border-light table-rounded-wrap"
+        >
+          <table class="table table-hover align-middle mb-0 text-secondary">
             <thead>
               <tr>
-                <th>Hari</th>
-                <th>Waktu</th>
-                <th>Mata Pelajaran</th>
-                <th>Pengajar</th>
-                <th>Ruang</th>
+                <th class="table-custom-header py-3 border-0">Hari</th>
+                <th class="table-custom-header py-3 border-0">Waktu</th>
+                <th class="table-custom-header py-3 border-0">
+                  Mata Pelajaran
+                </th>
+                <th class="table-custom-header py-3 border-0">Pengajar</th>
+                <th class="table-custom-header py-3 border-0">Ruang</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Senin</td>
+                <td class="py-3">Senin</td>
                 <td>13.00 – 16.00</td>
-                <td>Matematika & Penalaran Kuantitatif</td>
-                <td>Budi Hartono</td>
+                <td class="text-dark fw-medium">
+                  Matematika & Penalaran Kuantitatif
+                </td>
+                <td>Achmad Ferdinand</td>
                 <td>Ruang Intensif 1</td>
               </tr>
               <tr>
-                <td>Selasa</td>
+                <td class="py-3">Selasa</td>
                 <td>13.00 – 16.00</td>
-                <td>Fisika & Kimia Terpadu</td>
-                <td>Budi Hartono</td>
+                <td class="text-dark fw-medium">Fisika & Kimia Terpadu</td>
+                <td>Shella Alrantisi</td>
                 <td>Ruang Intensif 1</td>
               </tr>
               <tr>
-                <td>Rabu</td>
+                <td class="py-3">Rabu</td>
                 <td>13.00 – 16.00</td>
-                <td>Bahasa Inggris & Literasi</td>
-                <td>Dewi Anjani</td>
+                <td class="text-dark fw-medium">Bahasa Inggris & Literasi</td>
+                <td>Rechan Rizky Saputra</td>
                 <td>Ruang Intensif 2</td>
               </tr>
               <tr>
-                <td>Kamis</td>
+                <td class="py-3">Kamis</td>
                 <td>13.00 – 16.00</td>
-                <td>Biologi & Ilmu Kedokteran Dasar</td>
-                <td>Rizal Prasetya</td>
+                <td class="text-dark fw-medium">
+                  Biologi & Ilmu Kedokteran Dasar
+                </td>
+                <td>Dimas Surya Wismoady</td>
                 <td>Ruang Intensif 2</td>
               </tr>
               <tr>
-                <td>Sabtu</td>
+                <td class="py-3">Sabtu</td>
                 <td>08.00 – 12.00</td>
-                <td>Tryout CBT Simulasi UTBK</td>
+                <td class="text-dark fw-medium">Tryout CBT Simulasi UTBK</td>
                 <td>Semua Tutor</td>
                 <td>Lab Komputer</td>
               </tr>
             </tbody>
           </table>
-          <br />
         </div>
       </div>
 
       <div>
-        <div class="jadwal-header">
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4"
+        >
           <div>
-            <h3>Program Privat</h3>
-            <p>
+            <h3 class="fw-bold fs-4 mb-1">Program Privat</h3>
+            <p class="text-secondary small mb-0">
               Jadwal fleksibel · 1 guru 1 siswa · Bisa di rumah atau di tempat
               kami
             </p>
           </div>
-          <div class="harga-badge privat">Rp 150.000 <span>/sesi</span></div>
+          <div
+            class="badge bg-success bg-opacity-10 text-success border border-success-subtle rounded-pill px-4 py-2 fs-5"
+          >
+            Rp 15.000 <span class="fw-normal text-secondary fs-6">/sesi</span>
+          </div>
         </div>
 
-        <div class="table-responsive">
-          <table class="table table-bordered jadwal-table">
+        <div
+          class="table-responsive shadow-sm border border-light table-rounded-wrap mb-4"
+        >
+          <table class="table table-hover align-middle mb-0 text-secondary">
             <thead>
               <tr>
-                <th>Hari</th>
-                <th>Waktu Tersedia</th>
-                <th>Mata Pelajaran</th>
-                <th>Pengajar</th>
-                <th>Lokasi</th>
+                <th class="table-custom-header py-3 border-0">Hari</th>
+                <th class="table-custom-header py-3 border-0">
+                  Waktu Tersedia
+                </th>
+                <th class="table-custom-header py-3 border-0">
+                  Mata Pelajaran
+                </th>
+                <th class="table-custom-header py-3 border-0">Pengajar</th>
+                <th class="table-custom-header py-3 border-0">Lokasi</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Senin – Jumat</td>
+                <td class="py-3">Senin – Jumat</td>
                 <td>08.00 – 12.00</td>
-                <td>Matematika / Fisika</td>
-                <td>Budi Hartono</td>
+                <td class="text-dark fw-medium">Matematika / Fisika</td>
+                <td>Ahmad Yusron Fadil</td>
                 <td>Rumah / Tempat Kami</td>
               </tr>
               <tr>
-                <td>Senin – Sabtu</td>
+                <td class="py-3">Senin – Sabtu</td>
                 <td>08.00 – 17.00</td>
-                <td>Bahasa Inggris</td>
-                <td>Dewi Anjani</td>
+                <td class="text-dark fw-medium">Bahasa Inggris</td>
+                <td>Dimas Surya Wismoady</td>
                 <td>Rumah / Tempat Kami</td>
               </tr>
               <tr>
-                <td>Selasa – Sabtu</td>
+                <td class="py-3">Selasa – Sabtu</td>
                 <td>09.00 – 15.00</td>
-                <td>Biologi / Kimia</td>
-                <td>Rizal Prasetya</td>
+                <td class="text-dark fw-medium">Biologi / Kimia</td>
+                <td>Rechan Rizky Saputra</td>
                 <td>Rumah / Tempat Kami</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="privat-note">
-          <span>💡</span>
-          <p>
+        <div
+          class="alert bg-warning bg-opacity-10 border border-warning-subtle rounded-4 d-flex align-items-start gap-3 p-4"
+        >
+          <span class="fs-4">💡</span>
+          <p class="mb-0 text-dark" style="font-size: 0.95rem">
             Untuk jadwal privat, silakan hubungi admin terlebih dahulu melalui
-            halaman <a href="hubungi.html">Hubungi Kami</a> atau tombol Daftar
-            di atas untuk menyesuaikan waktu dengan pengajar.
+            halaman
+            <a
+              href="hubungi.html"
+              class="fw-bold text-primary text-decoration-none"
+              >Hubungi Kami</a
+            >
+            atau tombol Daftar di atas untuk menyesuaikan waktu dengan pengajar.
           </p>
         </div>
       </div>
     </div>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 Bimbel Prestasi. Semua hak dilindungi.</p>
+    <footer class="text-center py-4 mt-5 border-top text-secondary small">
+      <p class="mb-0">&copy; 2026 Bimbel Prestasi. Semua hak dilindungi.</p>
     </footer>
 
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>

@@ -9,104 +9,202 @@
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
 
-    link
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8fafc;
+      }
+
+      .hover-translate {
+        transition: transform 0.3s ease;
+      }
+      .hover-translate:hover {
+        transform: translateY(-6px);
+      }
+      .badge-buka {
+        background-color: #dcfce7;
+        color: #16a34a;
+      }
+      .badge-tutup {
+        background-color: #fee2e2;
+        color: #dc2626;
+      }
+    </style>
   </head>
-  <body>
-    <nav>
-      <div class="nav-container flex flex-row">
-        <a href="index.html" class="logo">
-          <img src="./asset/logo.png" />Bimbel <span>Prestasi</span>
+  <body class="text-dark">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
+      <div class="container">
+        <a
+          href="../index.html"
+          class="navbar-brand fw-bolder d-flex align-items-center fs-4 text-dark"
+        >
+          <img
+            src="./asset/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            class="me-2"
+          />
+          Bimbel <span class="text-primary ms-1">Prestasi</span>
         </a>
-        <div class="nav-links">
-          <a href="index.html">Beranda</a>
-          <a href="keunggulan.html">Keunggulan</a>
-          <a href="program.html">Program</a>
-          <a href="jadwal.html">Jadwal</a>
-          <a href="tentang.html">Tentang</a>
-          <a href="testimoni.html">Testimoni</a>
-          <a href="hubungi.html" style="color: #2563eb">Hubungi</a>
-          <a href="kontak.html" style="color: white" class="btn-daftar"
-            >Daftar</a
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <div
+            class="navbar-nav align-items-center gap-3 fw-semibold"
+            style="font-size: 0.9rem"
           >
+            <a class="nav-link text-secondary" href="../index.html">Beranda</a>
+            <a class="nav-link text-secondary" href="/src/uts/keunggulan.html"
+              >Keunggulan</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/program.html"
+              >Program</a
+            >
+            <a class="nav-link text-secondary" href="jadwal.html">Jadwal</a>
+            <a class="nav-link text-secondary" href="tentang.html">Tentang</a>
+            <a class="nav-link text-secondary" href="/src/uts/testimoni.html"
+              >Testimoni</a
+            >
+            <a class="nav-link text-primary" href="hubungi.html">Hubungi</a>
+            <a
+              href="/src/uts/kontak.html"
+              class="btn btn-primary text-white rounded-pill px-4 py-2 ms-lg-2"
+              >Daftar</a
+            >
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="section-title">
-        <h2>Hubungi Kami</h2>
-        <p>Ada pertanyaan? Tim kami siap membantu kamu setiap hari.</p>
+    <div class="container" style="padding-top: 120px; padding-bottom: 80px">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-2">Hubungi Kami</h2>
+        <p class="text-secondary">
+          Ada pertanyaan? Tim kami siap membantu kamu setiap hari.
+        </p>
       </div>
 
-      <div class="row info-row">
+      <div class="row g-4 mb-5">
         <div class="col-md-4">
-          <div class="info-card">
-            <div class="info-icon"></div>
-            <h4>Telepon / WhatsApp</h4>
-            <p>+62 823-3550-1686</p>
-            <a href="https://wa.me/6282335501686" class="btn-kontak"
-              >Chat WhatsApp</a
+          <div
+            class="card h-100 border-1 shadow-sm rounded-4 p-4 text-center hover-translate"
+          >
+            <div
+              class="card-body d-flex flex-column align-items-center justify-content-center"
             >
+              <h4 class="fw-bold fs-5 mb-2">Telepon / WhatsApp</h4>
+              <p class="text-secondary small mb-4">+62 823-3550-1686</p>
+              <a
+                href="https://wa.me/6282335501686"
+                class="btn btn-outline-primary rounded-pill fw-bold px-4 mt-auto"
+              >
+                Chat WhatsApp
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="info-card">
-            <div class="info-icon"></div>
-            <h4>Email</h4>
-            <p>ferdinandahmad222@gmail.com</p>
-            <a href="mailto:ferdinandahmad222@gmail.com" class="btn-kontak"
-              >Kirim Email</a
+          <div
+            class="card h-100 border-1 shadow-sm rounded-4 p-4 text-center hover-translate"
+          >
+            <div
+              class="card-body d-flex flex-column align-items-center justify-content-center"
             >
+              <h4 class="fw-bold fs-5 mb-2">Email</h4>
+              <p class="text-secondary small mb-4">
+                ferdinandahmad222@gmail.com
+              </p>
+              <a
+                href="mailto:ferdinandahmad222@gmail.com"
+                class="btn btn-outline-primary rounded-pill fw-bold px-4 mt-auto"
+              >
+                Kirim Email
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="info-card">
-            <div class="info-icon"></div>
-            <h4>Alamat</h4>
-            <p>Jl. Ria Desa Karangrejo, Kec. Garum, 66182 Jawa Timur</p>
-            <a
-              href="https://maps.app.goo.gl/3gJnkfWiLdrL8gQY8"
-              class="btn-kontak"
-              >Lihat Maps</a
+          <div
+            class="card h-100 border-1 shadow-sm rounded-4 p-4 text-center hover-translate"
+          >
+            <div
+              class="card-body d-flex flex-column align-items-center justify-content-center"
             >
+              <h4 class="fw-bold fs-5 mb-2">Alamat</h4>
+              <p class="text-secondary small mb-4">
+                Jl. Ria Desa Karangrejo, Kec. Garum, 66182 Jawa Timur
+              </p>
+              <a
+                href="https://maps.app.goo.gl/3gJnkfWiLdrL8gQY8"
+                class="btn btn-outline-primary rounded-pill fw-bold px-4 mt-auto"
+              >
+                Lihat Maps
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="jam-section">
-        <h3>Jam Operasional</h3>
-        <div class="row jam-grid">
+        <h3 class="fw-bold mb-4 fs-4">Jam Operasional</h3>
+        <div class="row g-4">
           <div class="col-md-4">
-            <div class="jam-card">
-              <div class="hari">Senin – Jumat</div>
-              <div class="waktu">08.00 – 20.00 WIB</div>
-              <span class="badge-buka">Buka</span>
+            <div class="card border-1 shadow-sm rounded-4 p-4 text-center">
+              <div class="fw-bold fs-6 mb-2">Senin – Jumat</div>
+              <div class="text-secondary fw-semibold fs-5 mb-3">
+                08.00 – 20.00 WIB
+              </div>
+              <div>
+                <span class="badge rounded-pill badge-buka px-3 py-2"
+                  >Buka</span
+                >
+              </div>
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="jam-card">
-              <div class="hari">Sabtu</div>
-              <div class="waktu">08.00 – 17.00 WIB</div>
-              <span class="badge-buka">Buka</span>
+            <div class="card border-1 shadow-sm rounded-4 p-4 text-center">
+              <div class="fw-bold fs-6 mb-2">Sabtu</div>
+              <div class="text-secondary fw-semibold fs-5 mb-3">
+                08.00 – 17.00 WIB
+              </div>
+              <div>
+                <span class="badge rounded-pill badge-buka px-3 py-2"
+                  >Buka</span
+                >
+              </div>
             </div>
           </div>
 
           <div class="col-md-4">
-            <div class="jam-card">
-              <div class="hari">Minggu</div>
-              <div class="waktu">Libur</div>
-              <span class="badge-tutup">Tutup</span>
+            <div class="card border-1 shadow-sm rounded-4 p-4 text-center">
+              <div class="fw-bold fs-6 mb-2">Minggu</div>
+              <div class="text-secondary fw-semibold fs-5 mb-3">Libur</div>
+              <div>
+                <span class="badge rounded-pill badge-tutup px-3 py-2"
+                  >Tutup</span
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 Bimbel Prestasi. Semua hak dilindungi.</p>
+    <footer class="text-center py-4 mt-5 border-top text-secondary small">
+      <p class="mb-0">© 2026 Bimbel Prestasi. Semua hak dilindungi.</p>
     </footer>
 
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>

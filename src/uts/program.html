@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bimbel Prestasi - Program</title>
     <link rel="stylesheet" href="../css/program.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
   </head>
   <body>
     <nav>
@@ -16,14 +20,22 @@
           <a href="../../index.html">Beranda</a>
           <a href="keunggulan.html">Keunggulan</a>
           <a href="program.html" style="color: #2563eb">Program</a>
+          <a href="../jadwal.html">Jadwal</a>
+          <a href="../tentang.html">Tentang</a>
           <a href="testimoni.html">Testimoni</a>
-          <a href="kontak.html" class="btn-daftar">Daftar</a>
+          <a href="../hubungi.html">Hubungi</a>
+          <a href="kontak.html" style="color: white" class="btn-daftar"
+            >Daftar</a
+          >
         </div>
       </div>
     </nav>
 
     <div class="container">
-      <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px">
+      <h2
+        style="text-align: center; font-size: 2.5rem; margin-bottom: 50px"
+        class="bg-white p-5 rounded-5 text-uppercase"
+      >
         Pilihan Program Kelas
       </h2>
       <div class="grid">
@@ -32,7 +44,7 @@
           <p style="color: #64748b; margin-bottom: 20px">
             Ideal untuk bantuan tugas harian.
           </p>
-          <div class="price">Rp 450rb <span>/bln</span></div>
+          <div class="price">Rp 200rb <span>/bln</span></div>
           <ul class="features">
             <li>
               <img src="../asset/checkmark.png" alt="" />3x Pertemuan Seminggu
@@ -42,14 +54,28 @@
               <img src="../asset/checkmark.png" alt="" /> Maksimal 15 Siswa
             </li>
           </ul>
-          <a href="kontak.html" class="btn-select">Pilih Kelas</a>
+          <a href="kontak.html" class="btn-select">Daftar Sekarang</a>
         </div>
-        <div class="price-card featured">
+
+        <div class="price-card">
           <h3>Intensif UTBK</h3>
-          <p style="color: #94a3b8; margin-bottom: 20px">
+          <p style="color: #94a3b8; margin-bottom: 10px">
             Target masuk PTN impian.
           </p>
-          <div class="price">Rp 850rb <span>/bln</span></div>
+
+          <div class="price">
+            <s
+              style="
+                color: #94a3b8;
+                font-size: 0.65em;
+                margin-right: 8px;
+                font-weight: normal;
+              "
+              >Rp 850rb</s
+            ><br />
+            Rp 500rb <span>/bln</span>
+          </div>
+
           <ul class="features">
             <li>
               <img src="../asset/checkmark.png" alt="" /> 5x Pertemuan Seminggu
@@ -66,12 +92,13 @@
           </ul>
           <a href="kontak.html" class="btn-select">Daftar Sekarang</a>
         </div>
+
         <div class="price-card">
           <h3>Privat</h3>
           <p style="color: #64748b; margin-bottom: 20px">
             Fokus 1 guru 1 siswa.
           </p>
-          <div class="price">Rp 150rb <span>/sesi</span></div>
+          <div class="price">Rp 15rb <span>/sesi</span></div>
           <ul class="features">
             <li>
               <img src="../asset/checkmark.png" alt="" /> Jadwal Fleksibel
@@ -84,9 +111,12 @@
               <img src="../asset/checkmark.png" alt="" /> Guru Datang ke Rumah
             </li>
           </ul>
-          <a href="kontak.html" class="btn-select">Hubungi Admin</a>
+          <a href="kontak.html" class="btn-select">Daftar Sekarang</a>
         </div>
       </div>
     </div>
+
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
