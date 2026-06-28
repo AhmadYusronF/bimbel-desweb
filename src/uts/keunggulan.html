@@ -4,65 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bimbel Prestasi - Keunggulan</title>
-    <link rel="stylesheet" href="../css/keunggulan.css" />
+
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8fafc;
+      }
+
+      .hover-translate {
+        transition: transform 0.3s ease;
+      }
+      .hover-translate:hover {
+        transform: translateY(-6px);
+      }
+      .badge-buka {
+        background-color: #dcfce7;
+        color: #16a34a;
+      }
+      .badge-tutup {
+        background-color: #fee2e2;
+        color: #dc2626;
+      }
+    </style>
   </head>
+
   <body>
-    <nav>
-      <div class="nav-container">
-        <a href="../../index.html" class="logo"
-          ><img src="../asset/logo.png" />Bimbel <span>Prestasi</span></a
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
+      <div class="container">
+        <a
+          href="../../index.html"
+          class="navbar-brand fw-bolder d-flex align-items-center fs-4 text-dark"
         >
-        <div class="nav-links">
-          <a href="../../index.html">Beranda</a>
-          <a href="keunggulan.html" style="color: #2563eb">Keunggulan</a>
-          <a href="program.html">Program</a>
-          <a href="../jadwal.html">Jadwal</a>
-          <a href="../tentang.html">Tentang</a>
-          <a href="testimoni.html">Testimoni</a>
-          <a href="../hubungi.html">Hubungi</a>
-          <a href="kontak.html" style="color: white" class="btn-daftar"
-            >Daftar</a
+          <img
+            src="../asset/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            class="me-2"
+          />
+          Bimbel <span class="text-primary ms-1">Prestasi</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <div
+            class="navbar-nav align-items-center gap-3 fw-semibold"
+            style="font-size: 0.9rem"
           >
+            <a class="nav-link text-secondary" href="../../index.html"
+              >Beranda</a
+            >
+            <a class="nav-link text-primary" href="/src/uts/keunggulan.html"
+              >Keunggulan</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/program.html"
+              >Program</a
+            >
+            <a class="nav-link text-secondary" href="/src/jadwal.html"
+              >Jadwal</a
+            >
+            <a class="nav-link text-secondary" href="/src/tentang.html"
+              >Tentang</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/testimoni.html"
+              >Testimoni</a
+            >
+            <a class="nav-link text-secondary" href="/src/hubungi.html"
+              >Hubungi</a
+            >
+            <a
+              href="/src/uts/kontak.html"
+              class="btn btn-primary text-white rounded-pill px-4 py-2 ms-lg-2 fw-bold"
+              >Daftar</a
+            >
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="section-title bg-white p-5 rounded-2">
-        <h2>Mengapa Memilih Kami?</h2>
-        <p>
+    <div style="height: 90px"></div>
+
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-5 mb-3">Mengapa Memilih Kami?</h2>
+        <p class="text-secondary mx-auto" style="max-width: 700px">
           Kami memberikan standar pendidikan terbaik dengan metode yang telah
           teruji untuk membantu siswa mencapai target akademik.
         </p>
       </div>
-      <div class="grid">
-        <div class="card">
-          <div class="icon"><img src="../asset/person.png" alt="" /></div>
-          <h3>Tutor Ahli</h3>
-          <p>
-            Pengajar kami adalah lulusan universitas top yang memiliki
-            sertifikasi dan pengalaman bertahun-tahun.
-          </p>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 text-center hover-translate">
+            <div class="mb-3 d-flex justify-content-center">
+              <img src="../asset/person.png" alt="Tutor Ahli" width="64" height="64" />
+            </div>
+            <h3 class="fw-bold h5 mb-3">Tutor Ahli</h3>
+            <p class="text-secondary">
+              Pengajar kami adalah lulusan universitas top yang memiliki
+              sertifikasi dan pengalaman bertahun-tahun.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon"><img src="../asset/book.png" alt="" /></div>
-          <h3>Modul Eksklusif</h3>
-          <p>
-            Materi belajar yang disusun secara sistematis, memudahkan siswa
-            memahami konsep dasar hingga tingkat mahir.
-          </p>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 text-center hover-translate">
+            <div class="mb-3 d-flex justify-content-center">
+              <img src="../asset/book.png" alt="Modul Eksklusif" width="64" height="64" />
+            </div>
+            <h3 class="fw-bold h5 mb-3">Modul Eksklusif</h3>
+            <p class="text-secondary">
+              Materi belajar yang disusun secara sistematis, memudahkan siswa
+              memahami konsep dasar hingga tingkat mahir.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <div class="icon"><img src="../asset/computer.png" alt="" /></div>
-          <h3>Fasilitas Modern</h3>
-          <p>
-            Ruang kelas ber-AC yang nyaman serta akses ke platform latihan soal
-            digital kapan saja.
-          </p>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm p-4 rounded-4 text-center hover-translate">
+            <div class="mb-3 d-flex justify-content-center">
+              <img src="../asset/computer.png" alt="Fasilitas Modern" width="64" height="64" />
+            </div>
+            <h3 class="fw-bold h5 mb-3">Fasilitas Modern</h3>
+            <p class="text-secondary">
+              Ruang kelas ber-AC yang nyaman serta akses ke platform latihan soal
+              digital kapan saja.
+            </p>
+          </div>
         </div>
       </div>
     </div>

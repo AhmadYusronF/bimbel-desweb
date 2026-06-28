@@ -4,114 +4,273 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bimbel Prestasi - Program</title>
-    <link rel="stylesheet" href="../css/program.css" />
+
     <link
       rel="stylesheet"
       href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f8fafc;
+      }
+
+      .hover-translate {
+        transition: transform 0.3s ease;
+      }
+      .hover-translate:hover {
+        transform: translateY(-6px);
+      }
+      .badge-buka {
+        background-color: #dcfce7;
+        color: #16a34a;
+      }
+      .badge-tutup {
+        background-color: #fee2e2;
+        color: #dc2626;
+      }
+    </style>
   </head>
+
   <body>
-    <nav>
-      <div class="nav-container">
-        <a href="../../index.html" class="logo"
-          ><img src="../asset/logo.png" />Bimbel <span>Prestasi</span></a
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
+      <div class="container">
+        <a
+          href="../../index.html"
+          class="navbar-brand fw-bolder d-flex align-items-center fs-4 text-dark"
         >
-        <div class="nav-links">
-          <a href="../../index.html">Beranda</a>
-          <a href="keunggulan.html">Keunggulan</a>
-          <a href="program.html" style="color: #2563eb">Program</a>
-          <a href="../jadwal.html">Jadwal</a>
-          <a href="../tentang.html">Tentang</a>
-          <a href="testimoni.html">Testimoni</a>
-          <a href="../hubungi.html">Hubungi</a>
-          <a href="kontak.html" style="color: white" class="btn-daftar"
-            >Daftar</a
+          <img
+            src="../asset/logo.png"
+            alt="Logo"
+            width="48"
+            height="48"
+            class="me-2"
+          />
+          Bimbel <span class="text-primary ms-1">Prestasi</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <div
+            class="navbar-nav align-items-center gap-3 fw-semibold"
+            style="font-size: 0.9rem"
           >
+            <a class="nav-link text-secondary" href="../../index.html"
+              >Beranda</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/keunggulan.html"
+              >Keunggulan</a
+            >
+            <a class="nav-link text-primary" href="/src/uts/program.html"
+              >Program</a
+            >
+            <a class="nav-link text-secondary" href="/src/jadwal.html"
+              >Jadwal</a
+            >
+            <a class="nav-link text-secondary" href="/src/tentang.html"
+              >Tentang</a
+            >
+            <a class="nav-link text-secondary" href="/src/uts/testimoni.html"
+              >Testimoni</a
+            >
+            <a class="nav-link text-secondary" href="/src/hubungi.html"
+              >Hubungi</a
+            >
+            <a
+              href="/src/uts/kontak.html"
+              class="btn btn-primary text-white rounded-pill px-4 py-2 ms-lg-2 fw-bold"
+              >Daftar</a
+            >
+          </div>
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <h2
-        style="text-align: center; font-size: 2.5rem; margin-bottom: 50px"
-        class="bg-white p-5 rounded-5 text-uppercase"
-      >
-        Pilihan Program Kelas
-      </h2>
-      <div class="grid">
-        <div class="price-card">
-          <h3>Reguler</h3>
-          <p style="color: #64748b; margin-bottom: 20px">
-            Ideal untuk bantuan tugas harian.
-          </p>
-          <div class="price">Rp 200rb <span>/bln</span></div>
-          <ul class="features">
-            <li>
-              <img src="../asset/checkmark.png" alt="" />3x Pertemuan Seminggu
-            </li>
-            <li><img src="../asset/checkmark.png" alt="" /> Modul Cetak</li>
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Maksimal 15 Siswa
-            </li>
-          </ul>
-          <a href="kontak.html" class="btn-select">Daftar Sekarang</a>
-        </div>
+    <div style="height: 90px"></div>
 
-        <div class="price-card">
-          <h3>Intensif UTBK</h3>
-          <p style="color: #94a3b8; margin-bottom: 10px">
-            Target masuk PTN impian.
-          </p>
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-5 mb-3">Pilihan Program Kelas</h2>
+      </div>
 
-          <div class="price">
-            <s
-              style="
-                color: #94a3b8;
-                font-size: 0.65em;
-                margin-right: 8px;
-                font-weight: normal;
-              "
-              >Rp 850rb</s
-            ><br />
-            Rp 500rb <span>/bln</span>
+      <div class="row g-4">
+        <!-- Reguler -->
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-0 shadow-sm p-4 rounded-4 text-center hover-translate d-flex flex-column"
+          >
+            <h3 class="fw-bold h4 mb-3 mt-5">Reguler</h3>
+            <p class="text-secondary mb-4">Ideal untuk bantuan tugas harian.</p>
+            <div class="display-6 fw-bold text-primary mb-4">
+              Rp 200rb <span class="fs-6 text-secondary fw-normal">/bln</span>
+            </div>
+            <ul class="list-unstyled text-start mb-4 mt-auto">
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>3x Pertemuan Seminggu</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Modul Cetak</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Maksimal 15 Siswa</span>
+              </li>
+            </ul>
+            <a
+              href="kontak.html"
+              class="btn btn-primary rounded-pill w-100 py-2"
+              >Daftar Sekarang</a
+            >
           </div>
-
-          <ul class="features">
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> 5x Pertemuan Seminggu
-            </li>
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Tryout CBT Berkala
-            </li>
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Konsultasi Jurusan
-            </li>
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Strategi Cepat Jawab
-            </li>
-          </ul>
-          <a href="kontak.html" class="btn-select">Daftar Sekarang</a>
         </div>
 
-        <div class="price-card">
-          <h3>Privat</h3>
-          <p style="color: #64748b; margin-bottom: 20px">
-            Fokus 1 guru 1 siswa.
-          </p>
-          <div class="price">Rp 15rb <span>/sesi</span></div>
-          <ul class="features">
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Jadwal Fleksibel
-            </li>
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Kurikulum Sesuai
-              Request
-            </li>
-            <li>
-              <img src="../asset/checkmark.png" alt="" /> Guru Datang ke Rumah
-            </li>
-          </ul>
-          <a href="kontak.html" class="btn-select">Daftar Sekarang</a>
+        <!-- Intensif UTBK -->
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-0 shadow-sm p-4 rounded-4 text-center hover-translate border-primary d-flex flex-column"
+            style="border-width: 2px !important"
+          >
+            <div
+              class="badge bg-primary text-white rounded-pill mb-3 align-self-center mx-auto px-3 py-2"
+            >
+              Paling Populer
+            </div>
+            <h3 class="fw-bold h4 mb-3">Intensif UTBK</h3>
+            <p class="text-secondary mb-4">Target masuk PTN impian.</p>
+            <div class="mb-4">
+              <span class="text-decoration-line-through text-muted fs-6 me-2"
+                >Rp 850rb</span
+              >
+              <span class="display-6 fw-bold text-primary">Rp 500rb</span>
+              <span class="fs-6 text-secondary fw-normal">/bln</span>
+            </div>
+            <ul class="list-unstyled text-start mb-4 mt-auto">
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>5x Pertemuan Seminggu</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Tryout CBT Berkala</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Konsultasi Jurusan</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Strategi Cepat Jawab</span>
+              </li>
+            </ul>
+            <a
+              href="kontak.html"
+              class="btn btn-primary rounded-pill w-100 py-2"
+              >Daftar Sekarang</a
+            >
+          </div>
+        </div>
+
+        <!-- Privat -->
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-0 shadow-sm p-4 rounded-4 text-center hover-translate d-flex flex-column"
+          >
+            <h3 class="fw-bold h4 mb-3 mt-5">Privat</h3>
+            <p class="text-secondary mb-4">Fokus 1 guru 1 siswa.</p>
+            <div class="display-6 fw-bold text-primary mb-4">
+              Rp 15rb <span class="fs-6 text-secondary fw-normal">/sesi</span>
+            </div>
+            <ul class="list-unstyled text-start mb-4 mt-auto">
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Jadwal Fleksibel</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Kurikulum Sesuai Request</span>
+              </li>
+              <li class="mb-2 d-flex align-items-start">
+                <img
+                  src="../asset/checkmark.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="me-2 mt-1"
+                />
+                <span>Guru Datang ke Rumah</span>
+              </li>
+            </ul>
+            <a
+              href="kontak.html"
+              class="btn btn-primary rounded-pill w-100 py-2"
+              >Daftar Sekarang</a
+            >
+          </div>
         </div>
       </div>
     </div>
