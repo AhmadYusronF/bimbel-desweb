@@ -71,14 +71,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           class="navbar-nav align-items-center gap-3 fw-semibold"
           style="font-size: 0.9rem">
           <a class="nav-link text-secondary" href="../../index.html">Beranda</a>
-          <a class="nav-link text-secondary" href="/src/uts/keunggulan.html">Keunggulan</a>
-          <a class="nav-link text-secondary" href="/src/uts/program.html">Program</a>
-          <a class="nav-link text-secondary" href="/src/jadwal.html">Jadwal</a>
-          <a class="nav-link text-secondary" href="/src/tentang.html">Tentang</a>
-          <a class="nav-link text-secondary" href="/src/uts/testimoni.php">Testimoni</a>
-          <a class="nav-link text-secondary" href="/src/hubungi.html">Hubungi</a>
+          <a class="nav-link text-secondary" href="keunggulan.html">Keunggulan</a>
+          <a class="nav-link text-secondary" href="program.html">Program</a>
+          <a class="nav-link text-secondary" href="../jadwal.html">Jadwal</a>
+          <a class="nav-link text-secondary" href="../tentang.html">Tentang</a>
+          <a class="nav-link text-secondary" href="testimoni.php">Testimoni</a>
+          <a class="nav-link text-secondary" href="../hubungi.html">Hubungi</a>
           <a
-            href="/src/uts/kontak.php"
+            href="kontak.php"
             class="btn btn-primary text-white rounded-pill px-4 py-2 ms-lg-2 fw-bold">Daftar</a>
         </div>
       </div>
